@@ -1,0 +1,37 @@
+{
+  "data":
+    {
+      "cartId": 1245,
+      "cartItemList": [
+        {
+          "productId": 1,
+          "productImage": "/men-tshirt1.jpeg",
+          "productPrice": 100.00,
+          "productName": "test",
+          "productDescription": "prod desc",
+          "productRating": 4,
+          "productSizes": "M",
+          "productColors": "Black",
+          "qty": 2,
+          "total": 100.00
+        },
+        {
+          "productId": 1,
+          "productImage": "/men-tshirt1.jpeg",
+          "productPrice": 100.00,
+          "productName": "test",
+          "productDescription": "prod desc",
+          "productRating": 4,
+          "productSizes": "M",
+          "productColors": "Black",
+          "qty": 2,
+          "total": 100.00
+        }
+      ],
+      "itemCount": 2,
+      "subtotal": 200.00
+    },
+  "totalRecords": 2,
+  "message": "Success!",
+  "statusCode": 200
+}

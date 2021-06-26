@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+     <div class="col-sm-12 col-md-12">
+        <table class="table table-hover" *ngIf="cartModel?.cartItemList">
+           <thead>
+              <tr>
+                 <th>Product</th>
+                 <th>Quantity</th>
+                 <th class="text-center">Price</th>
+                 <th class="text-center">Total</th>
+                 <th class="text-center"> Action </th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr *ngFor="let item of cartModel.cartItemList; index as i">
+                 <td class="col-sm-8 col-md-6">
+                    <div class="media">
+                       <a class="thumbnail pull-left" [href]="fileStorageUrl+''+item.productImage" target="_blank">
+                         <img class="media-object" [src]="fileStorageUrl+''+item.productImage" style="width: 72px; height: 72px;">
+                        </a>
+                       <div class="media-body">
+                          <h6 class="media-heading"><a href="javacript:void(0);">{{item.productName}}</a></h6>
+                          <p class="media-heading"> <a href="javacript:void(0);">{{item.productDescription}}</a></p>
+                       </div>
+                    </div>
+                 </td>
+                 <td class="col-sm-1 col-md-1" style="text-align: center">
+                    <input class="form-control" type="number" [(ngModel)]="item.qty" (ngModelChange)="cartQtyChange($event, i)" name="item_qty_{{i}}" minlength="1" #qty="ngModel" required>
+                 </td>
+                 <td class="col-sm-1 col-md-1 text-center"><strong>{{item.productPrice}}</strong></td>
+                 <td class="col-sm-1 col-md-1 text-center"><strong>{{item.total}}</strong></td>
+                 <td class="col-sm-1 col-md-1 text-center">
+                    <button type="button" class="btn btn-outline-danger" (click)="deleteItemFromCart(i)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                 </td>
+              </tr>
+              <tr>
+                 <td>   </td>
+                 <td>   </td>
+                 <td>   </td>
+                 <td>
+                    <strong>Subtotal</strong>
+                 </td>
+                 <td class="text-right">
+                    <strong>{{ cartModel.subtotal }}</strong>
+                 </td>
+              </tr>
+              <tr>
+                 <td>   </td>
+                 <td>   </td>
+                 <td>   </td>
+                 <td>
+                    <strong>Total</strong>
+                 </td>
+                 <td class="text-right">
+                    <strong>{{ cartModel.totalAmount }}</strong>
+                 </td>
+              </tr>
+              <tr>
+                 <td>   </td>
+                 <td>   </td>
+                 <td>   </td>
+                 <td>
+                  <a class="btn btn-default" routerLink="/">
+                    <span class="fa fa-shopping-cart"></span> Continue Shopping
+                  </a>
+                 </td>
+                 <td>
+                    <button type="button" class="btn btn-success">
+                    Checkout <span class="fa fa-play"></span>
+                    </button>
+                 </td>
+              </tr>
+           </tbody>
+        </table>
+     </div>
+  </div>
+</div>

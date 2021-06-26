@@ -1,0 +1,151 @@
+{
+  "data": [
+    {
+      "productId": 1,
+      "productImage": "/men-tshirt1.jpeg",
+      "productPrice": 199.00,
+      "productName": "Aelomart",
+      "productDescription": "Broad Stripes Men Round Neck Black, T-Shirt",
+      "productRating": 4,
+      "productSizes": [
+        {
+          "id": 1,
+          "value": "S"
+        },
+        {
+          "id": 2,
+          "value": "M"
+        },
+        {
+          "id": 3,
+          "value": "L"
+        }
+      ],
+      "productColors":[
+        {
+          "id": 1,
+          "value": "Red"
+        },
+        {
+          "id": 2,
+          "value": "Black"
+        },
+        {
+          "id": 3,
+          "value": "White"
+        }
+      ]
+    },
+    {
+      "productId": 2,
+      "productImage": "/men-tshirt2.jpeg",
+      "productPrice": 499.00,
+      "productName": "HELMONT",
+      "productDescription": "Striped Men Hooded Neck Red, Black T-Shirt",
+      "productRating": 3,
+      "productSizes": [
+        {
+          "id": 1,
+          "value": "S"
+        },
+        {
+          "id": 2,
+          "value": "M"
+        },
+        {
+          "id": 3,
+          "value": "L"
+        }
+      ],
+      "productColors":[
+        {
+          "id": 1,
+          "value": "Red"
+        },
+        {
+          "id": 2,
+          "value": "Black"
+        },
+        {
+          "id": 3,
+          "value": "White"
+        }
+      ]
+    },
+    {
+      "productId": 3,
+      "productImage": "/men-tshirt3.jpeg",
+      "productPrice": 399.00,
+      "productName": "Seven Rocks",
+      "productDescription": "Color Block Men Round Neck Black T-Shirt",
+      "productRating": 5,
+      "productSizes": [
+        {
+          "id": 1,
+          "value": "S"
+        },
+        {
+          "id": 2,
+          "value": "M"
+        },
+        {
+          "id": 3,
+          "value": "L"
+        }
+      ],
+      "productColors":[
+        {
+          "id": 1,
+          "value": "Red"
+        },
+        {
+          "id": 2,
+          "value": "Black"
+        },
+        {
+          "id": 3,
+          "value": "White"
+        }
+      ]
+    },
+    {
+      "productId": 4,
+      "productImage": "/men-tshirt4.jpeg",
+      "productPrice": 399.00,
+      "productName": "THE EG STORE",
+      "productDescription": "Color Block Men Round Neck Grey, Red, Black T-Shirt",
+      "productRating": 5,
+      "productSizes": [
+        {
+          "id": 1,
+          "value": "S"
+        },
+        {
+          "id": 2,
+          "value": "M"
+        },
+        {
+          "id": 3,
+          "value": "L"
+        }
+      ],
+      "productColors":[
+        {
+          "id": 1,
+          "value": "Red"
+        },
+        {
+          "id": 2,
+          "value": "Black"
+        },
+        {
+          "id": 3,
+          "value": "White"
+        }
+      ]
+    }
+  ],
+  "totalRecords": 50,
+  "message": "Success!",
+  "statusCode": 200
+}

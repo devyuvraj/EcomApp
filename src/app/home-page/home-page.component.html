@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+     <div class="col-md-4 mb-3" *ngFor="let item of productsLists; index as i;">
+        <div class="card h-100">
+           <div class="d-flex justify-content-between position-absolute w-100">
+              <div class="label-new">
+                 <span class="text-white bg-success small d-flex align-items-center px-2 py-1">
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <span class="ml-1">New</span>
+                 </span>
+              </div>
+              <div class="label-sale">
+                 <span class="text-white bg-primary small d-flex align-items-center px-2 py-1">
+                 <i class="fa fa-tag" aria-hidden="true"></i>
+                 <span class="ml-1">Sale</span>
+                 </span>
+              </div>
+           </div>
+           <a [href]="fileStorageUrl+''+item.productImage" target="_blank">
+            <img [src]="fileStorageUrl+''+item.productImage" class="card-img-top" alt="Product">
+           </a>
+           <div class="card-body px-2 pb-2 pt-1">
+              <div class="d-flex justify-content-between">
+                 <div>
+                    <p class="h4 text-primary">{{item.productPrice}}</p>
+                 </div>
+              </div>
+              <p class="text-warning d-flex align-items-center mb-2">
+                 <i [ngClass]="(item.productRating >= 1)? 'text-primary' : ''" class="fa fa-star"></i>
+                 <i [ngClass]="(item.productRating >= 2)? 'text-primary' : ''" class="fa fa-star"></i>
+                 <i [ngClass]="(item.productRating >= 3)? 'text-primary' : ''" class="fa fa-star"></i>
+                 <i [ngClass]="(item.productRating >= 4)? 'text-primary' : ''" class="fa fa-star"></i>
+                 <i [ngClass]="(item.productRating >= 5)? 'text-primary' : ''" class="fa fa-star"></i>
+              </p>
+              <p class="mb-0">
+                 <strong>
+                 <a href="javascript:void(0);" class="text-secondary">{{ item.productName }}</a>
+                 </strong>
+              </p>
+              <p class="mb-1">
+                 <small>
+                 <a href="javascript:void(0);" class="text-secondary">{{ item.productDescription }}</a>
+                 </small>
+              </p>
+              <div class="d-flex mb-3 justify-content-between">
+                 <div>
+                    <select class="custom-select mr-sm-2" id="selectedProductSize_{{j}}" name="selectedProductSize_{{j}}" (change)="onSelecteSize($event)" required>
+                      <option value=''>--Size--</option>
+                      <option *ngFor="let size of item.productSizes; let j = index" [ngValue]="size.value">
+                        {{ size.value }}
+                      </option>
+                    </select>
+                 </div>
+                 <div class="text-right">
+                    <select class="custom-select mr-sm-2" id="selectedProductColor_{{k}}" name="selectedProductColor_{{k}}" (change)="onSelecteColor($event)" required>
+                      <option value="">--Color--</option>
+                      <option *ngFor="let color of item.productColors; let k = index" [ngValue]="color.value">
+                        {{ color.value }}
+                      </option>
+                    </select>
+                 </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                 <div class="col px-0">
+                    <button class="btn btn-outline-primary btn-block" (click)="addProduct(item)" [disabled]="isSubmit">
+                    Add To Cart
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    </button>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
